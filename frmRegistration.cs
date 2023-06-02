@@ -26,5 +26,10 @@ namespace Franchising_Information_System
 		{
 
 		}
+
+		private void frmRegistration_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
