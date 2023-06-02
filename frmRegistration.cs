@@ -10,20 +10,21 @@ using System.Windows.Forms;
 
 namespace Franchising_Information_System
 {
-	public partial class Form1 : Form
+	public partial class frmRegistration : Form
 	{
-		public Form1()
+		public frmRegistration()
 		{
 			InitializeComponent();
 		}
 
-		private void btnRegistration_Click(object sender, EventArgs e)
+		private void btnClose_Click(object sender, EventArgs e)
 		{
-			frmRegistration f = new frmRegistration();
-			f.TopLevel = false;
-			panel4.Controls.Add(f);
-			f.BringToFront();
-			f.Show();
+			this.Dispose();
+		}
+
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
 		}
 	}
 }
