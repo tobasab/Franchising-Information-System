@@ -28,11 +28,13 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistration));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.btnClose = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
@@ -42,6 +44,11 @@
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.lblRowCount = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.panel3 = new System.Windows.Forms.Panel();
+			this.btnAddPerson = new System.Windows.Forms.Button();
+			this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.panel6 = new System.Windows.Forms.Panel();
 			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,21 +57,19 @@
 			this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column5 = new System.Windows.Forms.DataGridViewImageColumn();
-			this.panel3 = new System.Windows.Forms.Panel();
-			this.btnAddPerson = new System.Windows.Forms.Button();
-			this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.button2 = new System.Windows.Forms.Button();
+			this.dataGridView2 = new System.Windows.Forms.DataGridView();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.label2 = new System.Windows.Forms.Label();
-			this.dataGridView2 = new System.Windows.Forms.DataGridView();
+			this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
 			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-			this.panel6 = new System.Windows.Forms.Panel();
-			this.button1 = new System.Windows.Forms.Button();
-			this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.tabControl1.SuspendLayout();
@@ -73,9 +78,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.panel3.SuspendLayout();
 			this.tabPage2.SuspendLayout();
-			this.panel5.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
 			this.panel6.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+			this.panel5.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
@@ -92,11 +97,14 @@
 			// btnClose
 			// 
 			this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnClose.Location = new System.Drawing.Point(867, 5);
+			this.btnClose.FlatAppearance.BorderSize = 0;
+			this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+			this.btnClose.Location = new System.Drawing.Point(893, 5);
 			this.btnClose.Name = "btnClose";
-			this.btnClose.Size = new System.Drawing.Size(62, 23);
+			this.btnClose.Size = new System.Drawing.Size(33, 23);
 			this.btnClose.TabIndex = 1;
-			this.btnClose.Text = "Close";
+			this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnClose.UseVisualStyleBackColor = true;
 			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 			// 
@@ -174,14 +182,14 @@
 			this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gainsboro;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gainsboro;
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle16.BackColor = System.Drawing.Color.Gainsboro;
+			dataGridViewCellStyle16.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Gainsboro;
+			dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Gainsboro;
+			dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
 			this.dataGridView1.ColumnHeadersHeight = 25;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -193,14 +201,14 @@
             this.Column7,
             this.Column8,
             this.Column5});
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle17.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+			dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle17;
 			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataGridView1.EnableHeadersVisualStyles = false;
 			this.dataGridView1.GridColor = System.Drawing.Color.White;
@@ -208,19 +216,103 @@
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.ReadOnly = true;
 			this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle18.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.Transparent;
+			dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
 			this.dataGridView1.RowHeadersVisible = false;
 			this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataGridView1.Size = new System.Drawing.Size(919, 420);
 			this.dataGridView1.TabIndex = 1;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+			// 
+			// panel3
+			// 
+			this.panel3.BackColor = System.Drawing.Color.White;
+			this.panel3.Controls.Add(this.btnAddPerson);
+			this.panel3.Controls.Add(this.metroTextBox1);
+			this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel3.Location = new System.Drawing.Point(3, 3);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(919, 32);
+			this.panel3.TabIndex = 0;
+			// 
+			// btnAddPerson
+			// 
+			this.btnAddPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(185)))), ((int)(((byte)(255)))));
+			this.btnAddPerson.Dock = System.Windows.Forms.DockStyle.Right;
+			this.btnAddPerson.FlatAppearance.BorderSize = 0;
+			this.btnAddPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAddPerson.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPerson.Image")));
+			this.btnAddPerson.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnAddPerson.Location = new System.Drawing.Point(855, 0);
+			this.btnAddPerson.Name = "btnAddPerson";
+			this.btnAddPerson.Size = new System.Drawing.Size(64, 32);
+			this.btnAddPerson.TabIndex = 2;
+			this.btnAddPerson.Text = "ADD";
+			this.btnAddPerson.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnAddPerson.UseVisualStyleBackColor = false;
+			this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
+			// 
+			// metroTextBox1
+			// 
+			// 
+			// 
+			// 
+			this.metroTextBox1.CustomButton.Image = null;
+			this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(231, 1);
+			this.metroTextBox1.CustomButton.Name = "";
+			this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
+			this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+			this.metroTextBox1.CustomButton.TabIndex = 1;
+			this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+			this.metroTextBox1.CustomButton.UseSelectable = true;
+			this.metroTextBox1.CustomButton.Visible = false;
+			this.metroTextBox1.Lines = new string[0];
+			this.metroTextBox1.Location = new System.Drawing.Point(8, 4);
+			this.metroTextBox1.MaxLength = 32767;
+			this.metroTextBox1.Name = "metroTextBox1";
+			this.metroTextBox1.PasswordChar = '\0';
+			this.metroTextBox1.PromptText = "Search";
+			this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+			this.metroTextBox1.SelectedText = "";
+			this.metroTextBox1.SelectionLength = 0;
+			this.metroTextBox1.SelectionStart = 0;
+			this.metroTextBox1.ShortcutsEnabled = true;
+			this.metroTextBox1.Size = new System.Drawing.Size(253, 23);
+			this.metroTextBox1.TabIndex = 0;
+			this.metroTextBox1.UseSelectable = true;
+			this.metroTextBox1.WaterMark = "Search";
+			this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+			this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+			// 
+			// tabPage2
+			// 
+			this.tabPage2.Controls.Add(this.panel5);
+			this.tabPage2.Controls.Add(this.dataGridView2);
+			this.tabPage2.Controls.Add(this.panel6);
+			this.tabPage2.Location = new System.Drawing.Point(4, 24);
+			this.tabPage2.Name = "tabPage2";
+			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage2.Size = new System.Drawing.Size(925, 458);
+			this.tabPage2.TabIndex = 1;
+			this.tabPage2.Text = "Franchise Information";
+			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// panel6
+			// 
+			this.panel6.BackColor = System.Drawing.Color.White;
+			this.panel6.Controls.Add(this.metroTextBox2);
+			this.panel6.Controls.Add(this.button2);
+			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel6.Location = new System.Drawing.Point(3, 3);
+			this.panel6.Name = "panel6";
+			this.panel6.Size = new System.Drawing.Size(919, 32);
+			this.panel6.TabIndex = 3;
 			// 
 			// Column1
 			// 
@@ -286,91 +378,20 @@
 			this.Column5.ReadOnly = true;
 			this.Column5.Width = 5;
 			// 
-			// panel3
+			// button2
 			// 
-			this.panel3.BackColor = System.Drawing.Color.White;
-			this.panel3.Controls.Add(this.btnAddPerson);
-			this.panel3.Controls.Add(this.metroTextBox1);
-			this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel3.Location = new System.Drawing.Point(3, 3);
-			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(919, 32);
-			this.panel3.TabIndex = 0;
-			// 
-			// btnAddPerson
-			// 
-			this.btnAddPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnAddPerson.Location = new System.Drawing.Point(852, 4);
-			this.btnAddPerson.Name = "btnAddPerson";
-			this.btnAddPerson.Size = new System.Drawing.Size(62, 23);
-			this.btnAddPerson.TabIndex = 2;
-			this.btnAddPerson.Text = "ADD";
-			this.btnAddPerson.UseVisualStyleBackColor = true;
-			this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
-			// 
-			// metroTextBox1
-			// 
-			// 
-			// 
-			// 
-			this.metroTextBox1.CustomButton.Image = null;
-			this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(231, 1);
-			this.metroTextBox1.CustomButton.Name = "";
-			this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-			this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-			this.metroTextBox1.CustomButton.TabIndex = 1;
-			this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-			this.metroTextBox1.CustomButton.UseSelectable = true;
-			this.metroTextBox1.CustomButton.Visible = false;
-			this.metroTextBox1.Lines = new string[] {
-        "Search"};
-			this.metroTextBox1.Location = new System.Drawing.Point(8, 4);
-			this.metroTextBox1.MaxLength = 32767;
-			this.metroTextBox1.Name = "metroTextBox1";
-			this.metroTextBox1.PasswordChar = '\0';
-			this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.metroTextBox1.SelectedText = "";
-			this.metroTextBox1.SelectionLength = 0;
-			this.metroTextBox1.SelectionStart = 0;
-			this.metroTextBox1.ShortcutsEnabled = true;
-			this.metroTextBox1.Size = new System.Drawing.Size(253, 23);
-			this.metroTextBox1.TabIndex = 0;
-			this.metroTextBox1.Text = "Search";
-			this.metroTextBox1.UseSelectable = true;
-			this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-			this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-			// 
-			// tabPage2
-			// 
-			this.tabPage2.Controls.Add(this.panel5);
-			this.tabPage2.Controls.Add(this.dataGridView2);
-			this.tabPage2.Controls.Add(this.panel6);
-			this.tabPage2.Location = new System.Drawing.Point(4, 24);
-			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(925, 446);
-			this.tabPage2.TabIndex = 1;
-			this.tabPage2.Text = "Franchise Information";
-			this.tabPage2.UseVisualStyleBackColor = true;
-			// 
-			// panel5
-			// 
-			this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.panel5.Controls.Add(this.label2);
-			this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel5.Location = new System.Drawing.Point(3, 417);
-			this.panel5.Name = "panel5";
-			this.panel5.Size = new System.Drawing.Size(919, 26);
-			this.panel5.TabIndex = 5;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(827, 5);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(77, 15);
-			this.label2.TabIndex = 2;
-			this.label2.Text = "ROW COUNT";
+			this.button2.BackColor = System.Drawing.Color.White;
+			this.button2.Dock = System.Windows.Forms.DockStyle.Right;
+			this.button2.FlatAppearance.BorderSize = 0;
+			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+			this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.button2.Location = new System.Drawing.Point(886, 0);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(33, 32);
+			this.button2.TabIndex = 3;
+			this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.button2.UseVisualStyleBackColor = false;
 			// 
 			// dataGridView2
 			// 
@@ -382,14 +403,14 @@
 			this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
 			this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle13.BackColor = System.Drawing.Color.Gainsboro;
+			dataGridViewCellStyle13.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Gainsboro;
+			dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Gainsboro;
+			dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
 			this.dataGridView2.ColumnHeadersHeight = 25;
 			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 			this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -397,76 +418,56 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
             this.dataGridViewImageColumn1});
+			dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle14.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+			dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle14;
 			this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataGridView2.EnableHeadersVisualStyles = false;
+			this.dataGridView2.GridColor = System.Drawing.Color.White;
 			this.dataGridView2.Location = new System.Drawing.Point(3, 35);
-			this.dataGridView2.MultiSelect = false;
 			this.dataGridView2.Name = "dataGridView2";
 			this.dataGridView2.ReadOnly = true;
 			this.dataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+			dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle15.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Transparent;
+			dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
 			this.dataGridView2.RowHeadersVisible = false;
-			this.dataGridView2.Size = new System.Drawing.Size(919, 408);
-			this.dataGridView2.TabIndex = 4;
+			this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dataGridView2.Size = new System.Drawing.Size(919, 420);
+			this.dataGridView2.TabIndex = 6;
 			// 
-			// dataGridViewTextBoxColumn1
+			// panel5
 			// 
-			this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			this.dataGridViewTextBoxColumn1.ReadOnly = true;
-			this.dataGridViewTextBoxColumn1.Width = 41;
+			this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.panel5.Controls.Add(this.label2);
+			this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.panel5.Location = new System.Drawing.Point(3, 429);
+			this.panel5.Name = "panel5";
+			this.panel5.Size = new System.Drawing.Size(919, 26);
+			this.panel5.TabIndex = 7;
 			// 
-			// dataGridViewTextBoxColumn2
+			// label2
 			// 
-			this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dataGridViewTextBoxColumn2.HeaderText = "DATE RECIEVED";
-			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-			this.dataGridViewTextBoxColumn2.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn3
-			// 
-			this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.dataGridViewTextBoxColumn3.HeaderText = "CASE NUMBER";
-			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-			this.dataGridViewTextBoxColumn3.ReadOnly = true;
-			this.dataGridViewTextBoxColumn3.Width = 108;
-			// 
-			// dataGridViewTextBoxColumn4
-			// 
-			this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.dataGridViewTextBoxColumn4.HeaderText = "ZONE OF OPERATION";
-			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-			this.dataGridViewTextBoxColumn4.ReadOnly = true;
-			this.dataGridViewTextBoxColumn4.Width = 144;
-			// 
-			// dataGridViewImageColumn1
-			// 
-			this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.dataGridViewImageColumn1.HeaderText = "VIEW";
-			this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-			this.dataGridViewImageColumn1.ReadOnly = true;
-			this.dataGridViewImageColumn1.Width = 40;
-			// 
-			// panel6
-			// 
-			this.panel6.Controls.Add(this.button1);
-			this.panel6.Controls.Add(this.metroTextBox2);
-			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel6.Location = new System.Drawing.Point(3, 3);
-			this.panel6.Name = "panel6";
-			this.panel6.Size = new System.Drawing.Size(919, 32);
-			this.panel6.TabIndex = 3;
-			// 
-			// button1
-			// 
-			this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.button1.Location = new System.Drawing.Point(852, 4);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(62, 23);
-			this.button1.TabIndex = 2;
-			this.button1.Text = "ADD";
-			this.button1.UseVisualStyleBackColor = true;
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(827, 5);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(77, 15);
+			this.label2.TabIndex = 2;
+			this.label2.Text = "ROW COUNT";
 			// 
 			// metroTextBox2
 			// 
@@ -482,23 +483,87 @@
 			this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
 			this.metroTextBox2.CustomButton.UseSelectable = true;
 			this.metroTextBox2.CustomButton.Visible = false;
-			this.metroTextBox2.Lines = new string[] {
-        "Search"};
-			this.metroTextBox2.Location = new System.Drawing.Point(8, 4);
+			this.metroTextBox2.Lines = new string[0];
+			this.metroTextBox2.Location = new System.Drawing.Point(5, 5);
 			this.metroTextBox2.MaxLength = 32767;
 			this.metroTextBox2.Name = "metroTextBox2";
 			this.metroTextBox2.PasswordChar = '\0';
+			this.metroTextBox2.PromptText = "Search";
 			this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
 			this.metroTextBox2.SelectedText = "";
 			this.metroTextBox2.SelectionLength = 0;
 			this.metroTextBox2.SelectionStart = 0;
 			this.metroTextBox2.ShortcutsEnabled = true;
 			this.metroTextBox2.Size = new System.Drawing.Size(253, 23);
-			this.metroTextBox2.TabIndex = 0;
-			this.metroTextBox2.Text = "Search";
+			this.metroTextBox2.TabIndex = 4;
 			this.metroTextBox2.UseSelectable = true;
+			this.metroTextBox2.WaterMark = "Search";
 			this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
 			this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewTextBoxColumn1.HeaderText = "Case No.";
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			this.dataGridViewTextBoxColumn1.ReadOnly = true;
+			this.dataGridViewTextBoxColumn1.Width = 77;
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewTextBoxColumn2.HeaderText = "Date Recieved";
+			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			this.dataGridViewTextBoxColumn2.ReadOnly = true;
+			this.dataGridViewTextBoxColumn2.Width = 108;
+			// 
+			// dataGridViewTextBoxColumn3
+			// 
+			this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewTextBoxColumn3.HeaderText = "MIDDLE NAME";
+			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+			this.dataGridViewTextBoxColumn3.ReadOnly = true;
+			this.dataGridViewTextBoxColumn3.Width = 109;
+			// 
+			// dataGridViewTextBoxColumn4
+			// 
+			this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewTextBoxColumn4.HeaderText = "LAST NAME";
+			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+			this.dataGridViewTextBoxColumn4.ReadOnly = true;
+			this.dataGridViewTextBoxColumn4.Width = 93;
+			// 
+			// dataGridViewTextBoxColumn5
+			// 
+			this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewTextBoxColumn5.HeaderText = "EXT. NAME";
+			this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+			this.dataGridViewTextBoxColumn5.ReadOnly = true;
+			this.dataGridViewTextBoxColumn5.Width = 88;
+			// 
+			// dataGridViewTextBoxColumn6
+			// 
+			this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.dataGridViewTextBoxColumn6.HeaderText = "ADDRESS";
+			this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+			this.dataGridViewTextBoxColumn6.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn7
+			// 
+			this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewTextBoxColumn7.HeaderText = "CONTACT";
+			this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+			this.dataGridViewTextBoxColumn7.ReadOnly = true;
+			this.dataGridViewTextBoxColumn7.Width = 81;
+			// 
+			// dataGridViewImageColumn1
+			// 
+			this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewImageColumn1.HeaderText = "";
+			this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+			this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+			this.dataGridViewImageColumn1.ReadOnly = true;
+			this.dataGridViewImageColumn1.Width = 5;
 			// 
 			// frmRegistration
 			// 
@@ -525,10 +590,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.panel3.ResumeLayout(false);
 			this.tabPage2.ResumeLayout(false);
+			this.panel6.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
 			this.panel5.ResumeLayout(false);
 			this.panel5.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-			this.panel6.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -548,17 +613,7 @@
 		private System.Windows.Forms.Button btnAddPerson;
 		private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.Label lblRowCount;
-		private System.Windows.Forms.Panel panel5;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.DataGridView dataGridView2;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-		private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
 		private System.Windows.Forms.Panel panel6;
-		private System.Windows.Forms.Button button1;
-		private MetroFramework.Controls.MetroTextBox metroTextBox2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -567,5 +622,18 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
 		private System.Windows.Forms.DataGridViewImageColumn Column5;
+		private System.Windows.Forms.Panel panel5;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.DataGridView dataGridView2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+		private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+		private MetroFramework.Controls.MetroTextBox metroTextBox2;
+		private System.Windows.Forms.Button button2;
 	}
 }
