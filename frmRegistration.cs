@@ -32,7 +32,7 @@ namespace Franchising_Information_System
 				dr = cm.ExecuteReader();
 				while (dr.Read())
 				{
-					dataGridView1.Rows.Add(dr["id"].ToString(), dr["name"].ToString(), dr["address"].ToString(), dr["contact"].ToString());
+					dataGridView1.Rows.Add(dr["id"].ToString(), dr["fname"].ToString(), dr["mname"].ToString(), dr["lname"].ToString(), dr["ename"].ToString(), dr["address"].ToString(), dr["contact"].ToString());
 				}
 				dr.Close();
 				cn.Close();
@@ -58,7 +58,7 @@ namespace Franchising_Information_System
 
 		private void btnAddPerson_Click(object sender, EventArgs e)
 		{
-			frmAddPerson f = new frmAddPerson();
+			frmAddPerson f = new frmAddPerson(this);
 			f.ShowDialog();
 		}
 	}

@@ -31,5 +31,15 @@ namespace Franchising_Information_System
 		{
 			this.Dispose();
 		}
+
+		private void btnMaintenance_Click(object sender, EventArgs e)
+		{
+			frmMaintenance f = new frmMaintenance();
+			f.TopLevel = false;
+			panel4.Controls.Add(f);
+			f.BringToFront();
+		//	f.LoadRecords();
+			f.Show();
+		}
 	}
 }

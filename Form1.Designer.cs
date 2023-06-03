@@ -29,25 +29,24 @@
 		private void InitializeComponent()
 		{
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.button3 = new System.Windows.Forms.Button();
+			this.button5 = new System.Windows.Forms.Button();
+			this.button4 = new System.Windows.Forms.Button();
+			this.btnMaintenance = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
 			this.btnRegistration = new System.Windows.Forms.Button();
 			this.btnHome = new System.Windows.Forms.Button();
 			this.panel3 = new System.Windows.Forms.Panel();
-			this.panel2 = new System.Windows.Forms.Panel();
 			this.panel4 = new System.Windows.Forms.Panel();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panel1
 			// 
-			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(206)))), ((int)(((byte)(201)))));
+			this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(148)))));
 			this.panel1.Controls.Add(this.button5);
 			this.panel1.Controls.Add(this.button4);
-			this.panel1.Controls.Add(this.button3);
+			this.panel1.Controls.Add(this.btnMaintenance);
 			this.panel1.Controls.Add(this.button2);
 			this.panel1.Controls.Add(this.button1);
 			this.panel1.Controls.Add(this.btnRegistration);
@@ -59,23 +58,51 @@
 			this.panel1.Size = new System.Drawing.Size(167, 654);
 			this.panel1.TabIndex = 0;
 			// 
-			// button3
+			// button5
 			// 
-			this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.button3.FlatAppearance.BorderSize = 0;
-			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button3.Location = new System.Drawing.Point(0, 574);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(167, 40);
-			this.button3.TabIndex = 5;
-			this.button3.Text = "MAINTENANCE";
-			this.button3.UseVisualStyleBackColor = true;
+			this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button5.FlatAppearance.BorderSize = 0;
+			this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(239)))), ((int)(((byte)(196)))));
+			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button5.Location = new System.Drawing.Point(0, 300);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(167, 40);
+			this.button5.TabIndex = 7;
+			this.button5.Text = "ISSUE CERTIFICATE";
+			this.button5.UseVisualStyleBackColor = true;
+			// 
+			// button4
+			// 
+			this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button4.FlatAppearance.BorderSize = 0;
+			this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(239)))), ((int)(((byte)(196)))));
+			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button4.Location = new System.Drawing.Point(0, 260);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(167, 40);
+			this.button4.TabIndex = 6;
+			this.button4.Text = "VALIDITY";
+			this.button4.UseVisualStyleBackColor = true;
+			// 
+			// btnMaintenance
+			// 
+			this.btnMaintenance.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.btnMaintenance.FlatAppearance.BorderSize = 0;
+			this.btnMaintenance.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(239)))), ((int)(((byte)(196)))));
+			this.btnMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnMaintenance.Location = new System.Drawing.Point(0, 574);
+			this.btnMaintenance.Name = "btnMaintenance";
+			this.btnMaintenance.Size = new System.Drawing.Size(167, 40);
+			this.btnMaintenance.TabIndex = 5;
+			this.btnMaintenance.Text = "MAINTENANCE";
+			this.btnMaintenance.UseVisualStyleBackColor = true;
+			this.btnMaintenance.Click += new System.EventHandler(this.btnMaintenance_Click);
 			// 
 			// button2
 			// 
 			this.button2.Dock = System.Windows.Forms.DockStyle.Top;
 			this.button2.FlatAppearance.BorderSize = 0;
-			this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+			this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(239)))), ((int)(((byte)(196)))));
 			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button2.Location = new System.Drawing.Point(0, 220);
 			this.button2.Name = "button2";
@@ -88,6 +115,7 @@
 			// 
 			this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(112)))), ((int)(((byte)(85)))));
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Location = new System.Drawing.Point(0, 614);
 			this.button1.Name = "button1";
@@ -101,7 +129,7 @@
 			// 
 			this.btnRegistration.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnRegistration.FlatAppearance.BorderSize = 0;
-			this.btnRegistration.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+			this.btnRegistration.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(239)))), ((int)(((byte)(196)))));
 			this.btnRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnRegistration.Location = new System.Drawing.Point(0, 180);
 			this.btnRegistration.Name = "btnRegistration";
@@ -115,7 +143,7 @@
 			// 
 			this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
 			this.btnHome.FlatAppearance.BorderSize = 0;
-			this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+			this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(239)))), ((int)(((byte)(196)))));
 			this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnHome.Location = new System.Drawing.Point(0, 140);
 			this.btnHome.Name = "btnHome";
@@ -132,49 +160,14 @@
 			this.panel3.Size = new System.Drawing.Size(167, 140);
 			this.panel3.TabIndex = 0;
 			// 
-			// panel2
-			// 
-			this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(148)))));
-			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel2.Location = new System.Drawing.Point(167, 0);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(1008, 21);
-			this.panel2.TabIndex = 1;
-			// 
 			// panel4
 			// 
 			this.panel4.BackColor = System.Drawing.Color.White;
 			this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel4.Location = new System.Drawing.Point(167, 21);
+			this.panel4.Location = new System.Drawing.Point(167, 0);
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new System.Drawing.Size(1008, 633);
+			this.panel4.Size = new System.Drawing.Size(1008, 654);
 			this.panel4.TabIndex = 2;
-			// 
-			// button4
-			// 
-			this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-			this.button4.FlatAppearance.BorderSize = 0;
-			this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button4.Location = new System.Drawing.Point(0, 260);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(167, 40);
-			this.button4.TabIndex = 6;
-			this.button4.Text = "VALIDITY";
-			this.button4.UseVisualStyleBackColor = true;
-			// 
-			// button5
-			// 
-			this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-			this.button5.FlatAppearance.BorderSize = 0;
-			this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button5.Location = new System.Drawing.Point(0, 300);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(167, 40);
-			this.button5.TabIndex = 7;
-			this.button5.Text = "ISSUE CERTIFICATE";
-			this.button5.UseVisualStyleBackColor = true;
 			// 
 			// Form1
 			// 
@@ -184,7 +177,6 @@
 			this.ClientSize = new System.Drawing.Size(1175, 654);
 			this.ControlBox = false;
 			this.Controls.Add(this.panel4);
-			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -201,10 +193,9 @@
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Button btnHome;
 		private System.Windows.Forms.Panel panel3;
-		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.Button btnRegistration;
-		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button btnMaintenance;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button5;
