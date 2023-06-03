@@ -29,14 +29,14 @@
 		private void InitializeComponent()
 		{
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.button3 = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
 			this.btnRegistration = new System.Windows.Forms.Button();
 			this.btnHome = new System.Windows.Forms.Button();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.panel4 = new System.Windows.Forms.Panel();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -53,6 +53,43 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(167, 654);
 			this.panel1.TabIndex = 0;
+			// 
+			// button3
+			// 
+			this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.button3.FlatAppearance.BorderSize = 0;
+			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button3.Location = new System.Drawing.Point(0, 574);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(167, 40);
+			this.button3.TabIndex = 5;
+			this.button3.Text = "MAINTENANCE";
+			this.button3.UseVisualStyleBackColor = true;
+			// 
+			// button2
+			// 
+			this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button2.FlatAppearance.BorderSize = 0;
+			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button2.Location = new System.Drawing.Point(0, 194);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(167, 40);
+			this.button2.TabIndex = 4;
+			this.button2.Text = "ISSUE CERTIFICATE/ORDINANCE";
+			this.button2.UseVisualStyleBackColor = true;
+			// 
+			// button1
+			// 
+			this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.button1.FlatAppearance.BorderSize = 0;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Location = new System.Drawing.Point(0, 614);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(167, 40);
+			this.button1.TabIndex = 3;
+			this.button1.Text = "LOG OUT";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// btnRegistration
 			// 
@@ -102,42 +139,6 @@
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new System.Drawing.Size(1008, 602);
 			this.panel4.TabIndex = 2;
-			// 
-			// button1
-			// 
-			this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.button1.FlatAppearance.BorderSize = 0;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.Location = new System.Drawing.Point(0, 614);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(167, 40);
-			this.button1.TabIndex = 3;
-			this.button1.Text = "LOG OUT";
-			this.button1.UseVisualStyleBackColor = true;
-			// 
-			// button2
-			// 
-			this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.button2.FlatAppearance.BorderSize = 0;
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button2.Location = new System.Drawing.Point(0, 194);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(167, 40);
-			this.button2.TabIndex = 4;
-			this.button2.Text = "ISSUE CERTIFICATE/ORDINANCE";
-			this.button2.UseVisualStyleBackColor = true;
-			// 
-			// button3
-			// 
-			this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.button3.FlatAppearance.BorderSize = 0;
-			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button3.Location = new System.Drawing.Point(0, 574);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(167, 40);
-			this.button3.TabIndex = 5;
-			this.button3.Text = "MAINTENANCE";
-			this.button3.UseVisualStyleBackColor = true;
 			// 
 			// Form1
 			// 

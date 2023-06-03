@@ -16,5 +16,10 @@ namespace Franchising_Information_System
 		{
 			InitializeComponent();
 		}
+
+		private void btnClose_Click(object sender, EventArgs e)
+		{
+			this.Dispose();
+		}
 	}
 }

@@ -25,5 +25,10 @@ namespace Franchising_Information_System
 			f.BringToFront();
 			f.Show();
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			this.Dispose();
+		}
 	}
 }
