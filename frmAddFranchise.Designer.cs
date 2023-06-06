@@ -54,7 +54,7 @@
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.cbZone = new System.Windows.Forms.ComboBox();
 			this.label11 = new System.Windows.Forms.Label();
-			this.txtOwner = new MetroFramework.Controls.MetroTextBox();
+			this.txtOwner = new System.Windows.Forms.TextBox();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -81,6 +81,7 @@
 			this.btnClose.TabIndex = 1;
 			this.btnClose.Text = "[ CLOSE ]";
 			this.btnClose.UseVisualStyleBackColor = true;
+			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 			// 
 			// label1
 			// 
@@ -96,14 +97,14 @@
 			// 
 			this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(148)))));
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panel2.Location = new System.Drawing.Point(0, 390);
+			this.panel2.Location = new System.Drawing.Point(0, 470);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(488, 24);
 			this.panel2.TabIndex = 4;
 			// 
 			// btnClear
 			// 
-			this.btnClear.Location = new System.Drawing.Point(325, 348);
+			this.btnClear.Location = new System.Drawing.Point(320, 387);
 			this.btnClear.Name = "btnClear";
 			this.btnClear.Size = new System.Drawing.Size(75, 23);
 			this.btnClear.TabIndex = 32;
@@ -112,7 +113,7 @@
 			// 
 			// btnUpdate
 			// 
-			this.btnUpdate.Location = new System.Drawing.Point(244, 348);
+			this.btnUpdate.Location = new System.Drawing.Point(239, 387);
 			this.btnUpdate.Name = "btnUpdate";
 			this.btnUpdate.Size = new System.Drawing.Size(75, 23);
 			this.btnUpdate.TabIndex = 31;
@@ -121,7 +122,7 @@
 			// 
 			// btnSave
 			// 
-			this.btnSave.Location = new System.Drawing.Point(163, 348);
+			this.btnSave.Location = new System.Drawing.Point(158, 387);
 			this.btnSave.Name = "btnSave";
 			this.btnSave.Size = new System.Drawing.Size(75, 23);
 			this.btnSave.TabIndex = 30;
@@ -285,44 +286,18 @@
 			// 
 			// txtOwner
 			// 
-			this.txtOwner.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-			// 
-			// 
-			// 
-			this.txtOwner.CustomButton.Image = null;
-			this.txtOwner.CustomButton.Location = new System.Drawing.Point(301, 1);
-			this.txtOwner.CustomButton.Name = "";
-			this.txtOwner.CustomButton.Size = new System.Drawing.Size(21, 21);
-			this.txtOwner.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-			this.txtOwner.CustomButton.TabIndex = 1;
-			this.txtOwner.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-			this.txtOwner.CustomButton.UseSelectable = true;
-			this.txtOwner.CustomButton.Visible = false;
-			this.txtOwner.Lines = new string[0];
 			this.txtOwner.Location = new System.Drawing.Point(135, 58);
-			this.txtOwner.MaxLength = 32767;
 			this.txtOwner.Name = "txtOwner";
-			this.txtOwner.PasswordChar = '\0';
-			this.txtOwner.PromptText = "Click here to browse";
-			this.txtOwner.ReadOnly = true;
-			this.txtOwner.ScrollBars = System.Windows.Forms.ScrollBars.None;
-			this.txtOwner.SelectedText = "";
-			this.txtOwner.SelectionLength = 0;
-			this.txtOwner.SelectionStart = 0;
-			this.txtOwner.ShortcutsEnabled = true;
 			this.txtOwner.Size = new System.Drawing.Size(323, 23);
-			this.txtOwner.TabIndex = 43;
-			this.txtOwner.UseSelectable = true;
-			this.txtOwner.WaterMark = "Click here to browse";
-			this.txtOwner.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-			this.txtOwner.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+			this.txtOwner.TabIndex = 42;
+			this.txtOwner.DoubleClick += new System.EventHandler(this.txtOwner_DoubleClick_1);
 			// 
 			// frmAddFranchise
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.White;
-			this.ClientSize = new System.Drawing.Size(488, 414);
+			this.ClientSize = new System.Drawing.Size(488, 494);
 			this.ControlBox = false;
 			this.Controls.Add(this.txtOwner);
 			this.Controls.Add(this.label11);
@@ -389,6 +364,6 @@
 		private System.Windows.Forms.Label label11;
 		public System.Windows.Forms.DateTimePicker dateTimePicker1;
 		public System.Windows.Forms.ComboBox cbZone;
-		public MetroFramework.Controls.MetroTextBox txtOwner;
+		public System.Windows.Forms.TextBox txtOwner;
 	}
 }

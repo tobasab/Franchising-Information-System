@@ -45,19 +45,12 @@ namespace Franchising_Information_System
 					cm.Parameters.AddWithValue("@ename", txtExtName.Text);
 					cm.Parameters.AddWithValue("@address", txtAddress.Text);
 					cm.Parameters.AddWithValue("@contact", txtContact.Text);
-					//	cm.Parameters.AddWithValue("@address", "BRGY. " + cbBrgy.Text + ", " + cbCity.Text);
-				//	cm.Parameters.AddWithValue("@barangay", cbBrgy.Text);
-				//	cm.Parameters.AddWithValue("@city", cbCity.Text);
-				//	cm.Parameters.AddWithValue("@contact", contact.Text);
+			
 					cm.ExecuteNonQuery();
 					cn.Close();
 					MessageBox.Show("Record has been successfully saved!", dbconstring._title, MessageBoxButtons.OK, MessageBoxIcon.Information);
 					btnClear_Click(sender, e);
 					f.LoadRecords();
-				//	ClearPersonalDetailsForm();
-				//	f.registrationLoadRecord();
-
-
 				}
 			}
 			catch (Exception ex)

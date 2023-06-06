@@ -52,7 +52,7 @@ namespace Franchising_Information_System
 				dataGridView2.Rows.Clear();
 				cn.Open();
 
-				cm = new SqlCommand("select * from vwfranchise", cn);
+				cm = new SqlCommand("select * from vwfranchisedetails", cn);
 				dr = cm.ExecuteReader();
 				while (dr.Read())
 				{
@@ -123,9 +123,14 @@ namespace Franchising_Information_System
 
 		private void btnAddFranchise_Click(object sender, EventArgs e)
 		{
-			frmAddFranchise f = new frmAddFranchise();
+			frmAddFranchise f = new frmAddFranchise(this);
 			f.btnUpdate.Enabled = false;
 			f.ShowDialog();
+		}
+
+		private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
 		}
 	}
 }

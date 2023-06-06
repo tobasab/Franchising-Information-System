@@ -470,6 +470,7 @@
 			this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dataGridView2.Size = new System.Drawing.Size(919, 420);
 			this.dataGridView2.TabIndex = 6;
+			this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
 			// 
 			// panel6
 			// 
@@ -597,18 +598,18 @@
 			// 
 			// Column9
 			// 
-			this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
 			this.Column9.HeaderText = "Remarks";
 			this.Column9.Name = "Column9";
 			this.Column9.ReadOnly = true;
-			this.Column9.Width = 77;
 			// 
 			// Column10
 			// 
-			this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.Column10.HeaderText = "Owner";
 			this.Column10.Name = "Column10";
 			this.Column10.ReadOnly = true;
+			this.Column10.Width = 68;
 			// 
 			// dataGridViewImageColumn1
 			// 

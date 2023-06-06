@@ -24,6 +24,7 @@ namespace Franchising_Information_System
 			panel4.Controls.Add(f);
 			f.BringToFront();
 			f.LoadRecords();
+			f.FLoadRecords();
 			f.Show();
 		}
 

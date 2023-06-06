@@ -16,9 +16,24 @@ namespace Franchising_Information_System
 		SqlConnection cn;
 		SqlCommand cm;
 		SqlDataReader dr;
-		public frmAddFranchise()
+		frmRegistration f;
+		public string _personid = "";
+		public frmAddFranchise(frmRegistration f)
 		{
 			InitializeComponent();
+			cn = new SqlConnection(dbconstring._connection);
+			this.f = f;
+		}
+		private void btnClose_Click(object sender, EventArgs e)
+		{
+			this.Dispose();
+		}
+
+		private void txtOwner_DoubleClick_1(object sender, EventArgs e)
+		{
+			frmSearchPerson f = new frmSearchPerson(this);
+			f.LoadRecords();
+			f.ShowDialog();
 		}
 
 		private void btnSave_Click(object sender, EventArgs e)
@@ -27,10 +42,11 @@ namespace Franchising_Information_System
 			{
 				if (MessageBox.Show("Do you want to save this record? ", dbconstring._title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
 				{
+					
+					cm = new SqlCommand("insert into tblFranchiseDetails (caseno, daterecieved, zone, plate, crno,engineno,chassisno,make,remarks,personid) VALUES (@caseno, @daterecieved, @zone,@plate, @crno, @engineno,@chassisno,@make,@remarks,@personid)", cn);
 					cn.Open();
-					cm = new SqlCommand("insert into tblFranchiseDetails (caseno, daterecieved, zone, plate, crno,engineno,chassisno,make,remarks) VALUES (@caseno, @daterecieved, @zone,@plate, @crno, @engineno,@chassisno,@make,@remarks)", cn);
 					cm.Parameters.AddWithValue("@caseno", txtCaseNo.Text);
-					cm.Parameters.AddWithValue("@daterecieved", dateTimePicker1.Text);
+					cm.Parameters.AddWithValue("@daterecieved", DateTime.Parse(dateTimePicker1.Text));
 					cm.Parameters.AddWithValue("@zone", cbZone.Text);
 					cm.Parameters.AddWithValue("@plate", txtPlate.Text);
 					cm.Parameters.AddWithValue("@crno", txtCR.Text);
@@ -38,17 +54,12 @@ namespace Franchising_Information_System
 					cm.Parameters.AddWithValue("@chassisno", txtChassis.Text);
 					cm.Parameters.AddWithValue("@make", txtMake.Text);
 					cm.Parameters.AddWithValue("@remarks", txtRemarks.Text);
-					//	cm.Parameters.AddWithValue("@address", "BRGY. " + cbBrgy.Text + ", " + cbCity.Text);
-					//	cm.Parameters.AddWithValue("@barangay", cbBrgy.Text);
-					//	cm.Parameters.AddWithValue("@city", cbCity.Text);
-					//	cm.Parameters.AddWithValue("@contact", contact.Text);
+					cm.Parameters.AddWithValue("@personid", _personid);
 					cm.ExecuteNonQuery();
 					cn.Close();
 					MessageBox.Show("Record has been successfully saved!", dbconstring._title, MessageBoxButtons.OK, MessageBoxIcon.Information);
-					//btnClear_Click(sender, e);
-					//f.LoadRecords();
-					//	ClearPersonalDetailsForm();
-					//	f.registrationLoadRecord();
+					f.FLoadRecords();
+			
 				}
 			}
 			catch (Exception ex)
@@ -57,5 +68,11 @@ namespace Franchising_Information_System
 				MessageBox.Show(ex.Message, dbconstring._title, MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
+
+		private void cboOwners_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			e.Handled = true;
+		}
+	
 	}
 }
