@@ -44,24 +44,6 @@
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.lblRowCount = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.panel3 = new System.Windows.Forms.Panel();
-			this.btnAddPerson = new System.Windows.Forms.Button();
-			this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.panel5 = new System.Windows.Forms.Panel();
-			this.label2 = new System.Windows.Forms.Label();
-			this.dataGridView2 = new System.Windows.Forms.DataGridView();
-			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-			this.panel6 = new System.Windows.Forms.Panel();
-			this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
-			this.button2 = new System.Windows.Forms.Button();
 			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,6 +54,27 @@
 			this.colEdit = new System.Windows.Forms.DataGridViewImageColumn();
 			this.colDelete = new System.Windows.Forms.DataGridViewImageColumn();
 			this.colView = new System.Windows.Forms.DataGridViewImageColumn();
+			this.panel3 = new System.Windows.Forms.Panel();
+			this.btnAddPerson = new System.Windows.Forms.Button();
+			this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.panel5 = new System.Windows.Forms.Panel();
+			this.label2 = new System.Windows.Forms.Label();
+			this.dataGridView2 = new System.Windows.Forms.DataGridView();
+			this.panel6 = new System.Windows.Forms.Panel();
+			this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+			this.btnAddFranchise = new System.Windows.Forms.Button();
+			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.tabControl1.SuspendLayout();
@@ -234,6 +237,88 @@
 			this.dataGridView1.TabIndex = 1;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
 			// 
+			// Column1
+			// 
+			this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.Column1.HeaderText = "ID";
+			this.Column1.Name = "Column1";
+			this.Column1.ReadOnly = true;
+			this.Column1.Width = 42;
+			// 
+			// Column2
+			// 
+			this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.Column2.HeaderText = "FIRST NAME";
+			this.Column2.Name = "Column2";
+			this.Column2.ReadOnly = true;
+			this.Column2.Width = 94;
+			// 
+			// Column3
+			// 
+			this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.Column3.HeaderText = "MIDDLE NAME";
+			this.Column3.Name = "Column3";
+			this.Column3.ReadOnly = true;
+			this.Column3.Width = 107;
+			// 
+			// Column4
+			// 
+			this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.Column4.HeaderText = "LAST NAME";
+			this.Column4.Name = "Column4";
+			this.Column4.ReadOnly = true;
+			this.Column4.Width = 89;
+			// 
+			// Column6
+			// 
+			this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.Column6.HeaderText = "EXT. NAME";
+			this.Column6.Name = "Column6";
+			this.Column6.ReadOnly = true;
+			this.Column6.Width = 86;
+			// 
+			// Column7
+			// 
+			this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.Column7.HeaderText = "ADDRESS";
+			this.Column7.Name = "Column7";
+			this.Column7.ReadOnly = true;
+			// 
+			// Column8
+			// 
+			this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.Column8.HeaderText = "CONTACT";
+			this.Column8.Name = "Column8";
+			this.Column8.ReadOnly = true;
+			this.Column8.Width = 79;
+			// 
+			// colEdit
+			// 
+			this.colEdit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.colEdit.HeaderText = "";
+			this.colEdit.Image = ((System.Drawing.Image)(resources.GetObject("colEdit.Image")));
+			this.colEdit.Name = "colEdit";
+			this.colEdit.ReadOnly = true;
+			this.colEdit.Width = 5;
+			// 
+			// colDelete
+			// 
+			this.colDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.colDelete.HeaderText = "";
+			this.colDelete.Image = ((System.Drawing.Image)(resources.GetObject("colDelete.Image")));
+			this.colDelete.Name = "colDelete";
+			this.colDelete.ReadOnly = true;
+			this.colDelete.Width = 5;
+			// 
+			// colView
+			// 
+			this.colView.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.colView.HeaderText = "";
+			this.colView.Image = ((System.Drawing.Image)(resources.GetObject("colView.Image")));
+			this.colView.Name = "colView";
+			this.colView.ReadOnly = true;
+			this.colView.Width = 5;
+			// 
 			// panel3
 			// 
 			this.panel3.BackColor = System.Drawing.Color.White;
@@ -354,6 +439,9 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
+            this.Column5,
+            this.Column9,
+            this.Column10,
             this.dataGridViewImageColumn1});
 			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
@@ -383,75 +471,11 @@
 			this.dataGridView2.Size = new System.Drawing.Size(919, 420);
 			this.dataGridView2.TabIndex = 6;
 			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.dataGridViewTextBoxColumn1.HeaderText = "Case No.";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			this.dataGridViewTextBoxColumn1.ReadOnly = true;
-			this.dataGridViewTextBoxColumn1.Width = 77;
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.dataGridViewTextBoxColumn2.HeaderText = "Date Recieved";
-			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-			this.dataGridViewTextBoxColumn2.ReadOnly = true;
-			this.dataGridViewTextBoxColumn2.Width = 108;
-			// 
-			// dataGridViewTextBoxColumn3
-			// 
-			this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.dataGridViewTextBoxColumn3.HeaderText = "MIDDLE NAME";
-			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-			this.dataGridViewTextBoxColumn3.ReadOnly = true;
-			this.dataGridViewTextBoxColumn3.Width = 109;
-			// 
-			// dataGridViewTextBoxColumn4
-			// 
-			this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.dataGridViewTextBoxColumn4.HeaderText = "LAST NAME";
-			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-			this.dataGridViewTextBoxColumn4.ReadOnly = true;
-			this.dataGridViewTextBoxColumn4.Width = 93;
-			// 
-			// dataGridViewTextBoxColumn5
-			// 
-			this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.dataGridViewTextBoxColumn5.HeaderText = "EXT. NAME";
-			this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-			this.dataGridViewTextBoxColumn5.ReadOnly = true;
-			this.dataGridViewTextBoxColumn5.Width = 88;
-			// 
-			// dataGridViewTextBoxColumn6
-			// 
-			this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dataGridViewTextBoxColumn6.HeaderText = "ADDRESS";
-			this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-			this.dataGridViewTextBoxColumn6.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn7
-			// 
-			this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.dataGridViewTextBoxColumn7.HeaderText = "CONTACT";
-			this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-			this.dataGridViewTextBoxColumn7.ReadOnly = true;
-			this.dataGridViewTextBoxColumn7.Width = 81;
-			// 
-			// dataGridViewImageColumn1
-			// 
-			this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.dataGridViewImageColumn1.HeaderText = "";
-			this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-			this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-			this.dataGridViewImageColumn1.ReadOnly = true;
-			this.dataGridViewImageColumn1.Width = 5;
-			// 
 			// panel6
 			// 
 			this.panel6.BackColor = System.Drawing.Color.White;
 			this.panel6.Controls.Add(this.metroTextBox2);
-			this.panel6.Controls.Add(this.button2);
+			this.panel6.Controls.Add(this.btnAddFranchise);
 			this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel6.Location = new System.Drawing.Point(3, 3);
 			this.panel6.Name = "panel6";
@@ -490,102 +514,110 @@
 			this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
 			this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
 			// 
-			// button2
+			// btnAddFranchise
 			// 
-			this.button2.BackColor = System.Drawing.Color.White;
-			this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-			this.button2.FlatAppearance.BorderSize = 0;
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-			this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.button2.Location = new System.Drawing.Point(886, 0);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(33, 32);
-			this.button2.TabIndex = 3;
-			this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.button2.UseVisualStyleBackColor = false;
+			this.btnAddFranchise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnAddFranchise.BackColor = System.Drawing.Color.White;
+			this.btnAddFranchise.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnAddFranchise.FlatAppearance.BorderSize = 0;
+			this.btnAddFranchise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAddFranchise.Image = ((System.Drawing.Image)(resources.GetObject("btnAddFranchise.Image")));
+			this.btnAddFranchise.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnAddFranchise.Location = new System.Drawing.Point(879, 3);
+			this.btnAddFranchise.Name = "btnAddFranchise";
+			this.btnAddFranchise.Size = new System.Drawing.Size(33, 25);
+			this.btnAddFranchise.TabIndex = 3;
+			this.btnAddFranchise.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnAddFranchise.UseVisualStyleBackColor = false;
+			this.btnAddFranchise.Click += new System.EventHandler(this.btnAddFranchise_Click);
 			// 
-			// Column1
+			// dataGridViewTextBoxColumn1
 			// 
-			this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.Column1.HeaderText = "ID";
-			this.Column1.Name = "Column1";
-			this.Column1.ReadOnly = true;
-			this.Column1.Width = 42;
+			this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewTextBoxColumn1.HeaderText = "Case No.";
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			this.dataGridViewTextBoxColumn1.ReadOnly = true;
+			this.dataGridViewTextBoxColumn1.Width = 77;
 			// 
-			// Column2
+			// dataGridViewTextBoxColumn2
 			// 
-			this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.Column2.HeaderText = "FIRST NAME";
-			this.Column2.Name = "Column2";
-			this.Column2.ReadOnly = true;
-			this.Column2.Width = 94;
+			this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewTextBoxColumn2.HeaderText = "Date Recieved";
+			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			this.dataGridViewTextBoxColumn2.ReadOnly = true;
+			this.dataGridViewTextBoxColumn2.Width = 108;
 			// 
-			// Column3
+			// dataGridViewTextBoxColumn3
 			// 
-			this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.Column3.HeaderText = "MIDDLE NAME";
-			this.Column3.Name = "Column3";
-			this.Column3.ReadOnly = true;
-			this.Column3.Width = 107;
+			this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewTextBoxColumn3.HeaderText = "Zone Of Operation";
+			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+			this.dataGridViewTextBoxColumn3.ReadOnly = true;
+			this.dataGridViewTextBoxColumn3.Width = 132;
 			// 
-			// Column4
+			// dataGridViewTextBoxColumn4
 			// 
-			this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.Column4.HeaderText = "LAST NAME";
-			this.Column4.Name = "Column4";
-			this.Column4.ReadOnly = true;
-			this.Column4.Width = 89;
+			this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewTextBoxColumn4.HeaderText = "Plate No.";
+			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+			this.dataGridViewTextBoxColumn4.ReadOnly = true;
+			this.dataGridViewTextBoxColumn4.Width = 80;
 			// 
-			// Column6
+			// dataGridViewTextBoxColumn5
 			// 
-			this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.Column6.HeaderText = "EXT. NAME";
-			this.Column6.Name = "Column6";
-			this.Column6.ReadOnly = true;
-			this.Column6.Width = 86;
+			this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewTextBoxColumn5.HeaderText = "CR No.";
+			this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+			this.dataGridViewTextBoxColumn5.ReadOnly = true;
+			this.dataGridViewTextBoxColumn5.Width = 66;
 			// 
-			// Column7
+			// dataGridViewTextBoxColumn6
 			// 
-			this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.Column7.HeaderText = "ADDRESS";
-			this.Column7.Name = "Column7";
-			this.Column7.ReadOnly = true;
+			this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewTextBoxColumn6.HeaderText = "Engine No.";
+			this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+			this.dataGridViewTextBoxColumn6.ReadOnly = true;
+			this.dataGridViewTextBoxColumn6.Width = 88;
 			// 
-			// Column8
+			// dataGridViewTextBoxColumn7
 			// 
-			this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.Column8.HeaderText = "CONTACT";
-			this.Column8.Name = "Column8";
-			this.Column8.ReadOnly = true;
-			this.Column8.Width = 79;
+			this.dataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewTextBoxColumn7.HeaderText = "Chassis No.";
+			this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+			this.dataGridViewTextBoxColumn7.ReadOnly = true;
+			this.dataGridViewTextBoxColumn7.Width = 90;
 			// 
-			// colEdit
+			// Column5
 			// 
-			this.colEdit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.colEdit.HeaderText = "";
-			this.colEdit.Image = ((System.Drawing.Image)(resources.GetObject("colEdit.Image")));
-			this.colEdit.Name = "colEdit";
-			this.colEdit.ReadOnly = true;
-			this.colEdit.Width = 5;
+			this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.Column5.HeaderText = "Make";
+			this.Column5.Name = "Column5";
+			this.Column5.ReadOnly = true;
+			this.Column5.Width = 60;
 			// 
-			// colDelete
+			// Column9
 			// 
-			this.colDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.colDelete.HeaderText = "";
-			this.colDelete.Image = ((System.Drawing.Image)(resources.GetObject("colDelete.Image")));
-			this.colDelete.Name = "colDelete";
-			this.colDelete.ReadOnly = true;
-			this.colDelete.Width = 5;
+			this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.Column9.HeaderText = "Remarks";
+			this.Column9.Name = "Column9";
+			this.Column9.ReadOnly = true;
+			this.Column9.Width = 77;
 			// 
-			// colView
+			// Column10
 			// 
-			this.colView.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.colView.HeaderText = "";
-			this.colView.Image = ((System.Drawing.Image)(resources.GetObject("colView.Image")));
-			this.colView.Name = "colView";
-			this.colView.ReadOnly = true;
-			this.colView.Width = 5;
+			this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.Column10.HeaderText = "Owner";
+			this.Column10.Name = "Column10";
+			this.Column10.ReadOnly = true;
+			// 
+			// dataGridViewImageColumn1
+			// 
+			this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+			this.dataGridViewImageColumn1.HeaderText = "";
+			this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+			this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+			this.dataGridViewImageColumn1.ReadOnly = true;
+			this.dataGridViewImageColumn1.Width = 5;
 			// 
 			// frmRegistration
 			// 
@@ -639,16 +671,8 @@
 		private System.Windows.Forms.Panel panel5;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.DataGridView dataGridView2;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-		private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
 		private MetroFramework.Controls.MetroTextBox metroTextBox2;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button btnAddFranchise;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -659,5 +683,16 @@
 		private System.Windows.Forms.DataGridViewImageColumn colEdit;
 		private System.Windows.Forms.DataGridViewImageColumn colDelete;
 		private System.Windows.Forms.DataGridViewImageColumn colView;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+		private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
 	}
 }
