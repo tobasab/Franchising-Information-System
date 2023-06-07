@@ -144,7 +144,7 @@ namespace Franchising_Information_System
                 f.txtChassis.Text = dataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
                 f.txtMake.Text = dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
                 f.txtRemarks.Text = dataGridView2.Rows[e.RowIndex].Cells[8].Value.ToString();
-				f.txtOwner.Text = dataGridView2.Rows[e.RowIndex].Cells[9].Value.ToString();
+				//f.txtOwner.Text = dataGridView2.Rows[e.RowIndex].Cells[9].Value.ToString();
                 f.btnSave.Enabled = false;
                 f.btnUpdate.Enabled = true;
                 f.ShowDialog();
@@ -164,5 +164,26 @@ namespace Franchising_Information_System
                 }
             }
         }
-	}
+
+        private void dataGridView1_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            frmViewPersonalDetails f = new frmViewPersonalDetails();
+            string fname = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            string mname = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            string lname = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            string ename = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            string wholename = fname + " " + mname + " " + lname + " " + ename;
+            f.name.Text = wholename;
+            //f.name.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString() + " " + dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString() +" "+ dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString() + " " + dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
+            f.address.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            f.contact.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+
+			//f.qrbox.SizeMode = PictureBoxSizeMode.AutoSize;
+			// Zen.Barcode.CodeQrBarcodeDraw qrbarcode = Zen.Barcode.BarcodeDrawFactory.CodeQr;
+			///  f.qrbox.Image = qrbarcode.Draw(wholename, 20);
+			f.LoadRecords();
+            f.BringToFront();
+            f.Show();
+        }
+    }
 }

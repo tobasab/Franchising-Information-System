@@ -18,7 +18,7 @@ namespace Franchising_Information_System
 		SqlDataReader dr;
 		frmRegistration f;
 		public string _personid = "";
-		public string _caseno = "";
+		public string _owner;
 		public frmAddFranchise(frmRegistration f)
 		{
 			InitializeComponent();
@@ -60,6 +60,7 @@ namespace Franchising_Information_System
 					cn.Close();
 					MessageBox.Show("Record has been successfully saved!", dbconstring._title, MessageBoxButtons.OK, MessageBoxIcon.Information);
 					f.FLoadRecords();
+					btnClear_Click(sender,e);
 			
 				}
 			}
@@ -81,10 +82,9 @@ namespace Franchising_Information_System
             {
                 if (MessageBox.Show("Do you want to update this record? ", dbconstring._title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-
+                   
                     cm = new SqlCommand("update tblFranchiseDetails set daterecieved=@daterecieved,zone=@zone,plate=@plate,crno=@crno,engineno=@engineno,chassisno=@chassisno,make=@make,remarks=@remarks,personid=@personid where caseno = @caseno", cn);
                     cn.Open();
-                    
                     cm.Parameters.AddWithValue("@daterecieved", DateTime.Parse(dateTimePicker1.Text));
                     cm.Parameters.AddWithValue("@zone", cbZone.Text);
                     cm.Parameters.AddWithValue("@plate", txtPlate.Text);
@@ -99,6 +99,7 @@ namespace Franchising_Information_System
                     cn.Close();
                     MessageBox.Show("Record has been successfully updated!", dbconstring._title, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     f.FLoadRecords();
+					
 					this.Dispose();
 
                 }
@@ -108,6 +109,19 @@ namespace Franchising_Information_System
                 cn.Close();
                 MessageBox.Show(ex.Message, dbconstring._title, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+			txtCaseNo.Clear();
+			txtPlate.Clear();
+			txtCR.Clear();
+			txtEngine.Clear();
+			txtChassis.Clear();	
+			txtMake.Clear();
+			txtRemarks.Clear();
+            btnSave.Enabled = true;
+            btnUpdate.Enabled = false;
         }
     }
 }

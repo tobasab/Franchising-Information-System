@@ -97,23 +97,24 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(184)))), ((int)(((byte)(148)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 426);
+            this.panel2.Location = new System.Drawing.Point(0, 407);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(488, 24);
             this.panel2.TabIndex = 4;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(316, 373);
+            this.btnClear.Location = new System.Drawing.Point(318, 357);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 32;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(235, 373);
+            this.btnUpdate.Location = new System.Drawing.Point(237, 357);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 31;
@@ -123,7 +124,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(154, 373);
+            this.btnSave.Location = new System.Drawing.Point(156, 357);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 30;
@@ -270,7 +271,12 @@
             // 
             // cbZone
             // 
+            this.cbZone.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbZone.FormattingEnabled = true;
+            this.cbZone.Items.AddRange(new object[] {
+            "Poblacion",
+            "Calean",
+            "Buenaflor"});
             this.cbZone.Location = new System.Drawing.Point(135, 145);
             this.cbZone.Name = "cbZone";
             this.cbZone.Size = new System.Drawing.Size(323, 23);
@@ -299,7 +305,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(488, 450);
+            this.ClientSize = new System.Drawing.Size(488, 431);
             this.ControlBox = false;
             this.Controls.Add(this.txtOwner);
             this.Controls.Add(this.label11);
