@@ -75,7 +75,6 @@
 			this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.colEdit = new System.Windows.Forms.DataGridViewImageColumn();
 			this.colDelete = new System.Windows.Forms.DataGridViewImageColumn();
-			this.colView = new System.Windows.Forms.DataGridViewImageColumn();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.tabControl1.SuspendLayout();
@@ -207,8 +206,7 @@
             this.Column7,
             this.Column8,
             this.colEdit,
-            this.colDelete,
-            this.colView});
+            this.colDelete});
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
 			dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -623,15 +621,6 @@
 			this.colDelete.ReadOnly = true;
 			this.colDelete.Width = 5;
 			// 
-			// colView
-			// 
-			this.colView.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.colView.HeaderText = "";
-			this.colView.Image = ((System.Drawing.Image)(resources.GetObject("colView.Image")));
-			this.colView.Name = "colView";
-			this.colView.ReadOnly = true;
-			this.colView.Width = 5;
-			// 
 			// frmRegistration
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -707,6 +696,5 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
 		private System.Windows.Forms.DataGridViewImageColumn colEdit;
 		private System.Windows.Forms.DataGridViewImageColumn colDelete;
-		private System.Windows.Forms.DataGridViewImageColumn colView;
 	}
 }
