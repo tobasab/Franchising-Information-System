@@ -56,7 +56,7 @@ namespace Franchising_Information_System
 				dr = cm.ExecuteReader();
 				while (dr.Read())
 				{
-					dataGridView2.Rows.Add(dr[0], dr[1], dr[2], dr[3], dr[4], dr[5], dr[6], dr[7], dr[8],dr[9]);
+					dataGridView2.Rows.Add(dr["caseno"],DateTime.Parse(dr["daterecieved"].ToString()).ToShortDateString(),dr["zone"],dr["plate"],dr["crno"],dr["engineno"],dr["chassisno"],dr["make"], dr["remarks"], dr["owner"]);
 				}
 				dr.Close();
 				cn.Close();
@@ -130,7 +130,39 @@ namespace Franchising_Information_System
 
 		private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
+            string _column = dataGridView2.Columns[e.ColumnIndex].Name;
+            if (_column == "colEdit2")
+            {
+                frmAddFranchise f = new frmAddFranchise(this);
+                
+                f.txtCaseNo.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+                f.dateTimePicker1.Value = DateTime.Parse(dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString());
+                f.cbZone.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+                f.txtPlate.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+                f.txtCR.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
+                f.txtEngine.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
+                f.txtChassis.Text = dataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
+                f.txtMake.Text = dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
+                f.txtRemarks.Text = dataGridView2.Rows[e.RowIndex].Cells[8].Value.ToString();
+				f.txtOwner.Text = dataGridView2.Rows[e.RowIndex].Cells[9].Value.ToString();
+                f.btnSave.Enabled = false;
+                f.btnUpdate.Enabled = true;
+                f.ShowDialog();
 
-		}
+            }
+            else if(_column == "colDelete2")
+            {
+                if (MessageBox.Show("Do you want to delete this record", dbconstring._title, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    cn.Open();
+                    cm = new SqlCommand("delete from tblFranchiseDetails where caseno = @caseno", cn);
+                    cm.Parameters.AddWithValue("@caseno", dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    MessageBox.Show("Record has been deleted successfully", dbconstring._title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FLoadRecords();
+                }
+            }
+        }
 	}
 }

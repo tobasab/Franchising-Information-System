@@ -18,6 +18,7 @@ namespace Franchising_Information_System
 		SqlDataReader dr;
 		frmRegistration f;
 		public string _personid = "";
+		public string _caseno = "";
 		public frmAddFranchise(frmRegistration f)
 		{
 			InitializeComponent();
@@ -73,6 +74,40 @@ namespace Franchising_Information_System
 		{
 			e.Handled = true;
 		}
-	
-	}
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Do you want to update this record? ", dbconstring._title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    cm = new SqlCommand("update tblFranchiseDetails set daterecieved=@daterecieved,zone=@zone,plate=@plate,crno=@crno,engineno=@engineno,chassisno=@chassisno,make=@make,remarks=@remarks,personid=@personid where caseno = @caseno", cn);
+                    cn.Open();
+                    
+                    cm.Parameters.AddWithValue("@daterecieved", DateTime.Parse(dateTimePicker1.Text));
+                    cm.Parameters.AddWithValue("@zone", cbZone.Text);
+                    cm.Parameters.AddWithValue("@plate", txtPlate.Text);
+                    cm.Parameters.AddWithValue("@crno", txtCR.Text);
+                    cm.Parameters.AddWithValue("@engineno", txtEngine.Text);
+                    cm.Parameters.AddWithValue("@chassisno", txtChassis.Text);
+                    cm.Parameters.AddWithValue("@make", txtMake.Text);
+                    cm.Parameters.AddWithValue("@remarks", txtRemarks.Text);
+                    cm.Parameters.AddWithValue("@personid", _personid);
+                    cm.Parameters.AddWithValue("@caseno", txtCaseNo.Text);
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    MessageBox.Show("Record has been successfully updated!", dbconstring._title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    f.FLoadRecords();
+					this.Dispose();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message, dbconstring._title, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
 }

@@ -64,8 +64,13 @@ namespace Franchising_Information_System
 			string _column = dataGridView1.Columns[e.ColumnIndex].Name;
 			if (_column == "colSelect")
 			{
-				f._personid = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-				f.txtOwner.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+				string fname = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+				string mname = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                string lname = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                string ename = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+				string wholename = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() + " " + dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString() + " " + dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString() + " " + dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                f._personid = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+				f.txtOwner.Text = wholename;
 				this.Dispose();
 			}
 		}
