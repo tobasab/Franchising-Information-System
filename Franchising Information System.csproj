@@ -80,6 +80,18 @@
     <Compile Include="frmMaintenance.Designer.cs">
       <DependentUpon>frmMaintenance.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOrdinance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrdinance.Designer.cs">
+      <DependentUpon>frmOrdinance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrdinanceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrdinanceList.Designer.cs">
+      <DependentUpon>frmOrdinanceList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +103,18 @@
     </Compile>
     <Compile Include="frmSearchPerson.Designer.cs">
       <DependentUpon>frmSearchPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmValidity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidity.Designer.cs">
+      <DependentUpon>frmValidity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmValidityList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidityList.Designer.cs">
+      <DependentUpon>frmValidityList.cs</DependentUpon>
     </Compile>
     <Compile Include="frmViewPersonalDetails.cs">
       <SubType>Form</SubType>
@@ -112,11 +136,23 @@
     <EmbeddedResource Include="frmMaintenance.resx">
       <DependentUpon>frmMaintenance.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmOrdinance.resx">
+      <DependentUpon>frmOrdinance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrdinanceList.resx">
+      <DependentUpon>frmOrdinanceList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRegistration.resx">
       <DependentUpon>frmRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSearchPerson.resx">
       <DependentUpon>frmSearchPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValidity.resx">
+      <DependentUpon>frmValidity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValidityList.resx">
+      <DependentUpon>frmValidityList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewPersonalDetails.resx">
       <DependentUpon>frmViewPersonalDetails.cs</DependentUpon>

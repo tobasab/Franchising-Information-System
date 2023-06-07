@@ -42,5 +42,25 @@ namespace Franchising_Information_System
 		//	f.LoadRecords();
 			f.Show();
 		}
-	}
+
+        private void btnOrdinance_Click(object sender, EventArgs e)
+        {
+            frmOrdinanceList f = new frmOrdinanceList();
+            f.TopLevel = false;
+            panel4.Controls.Add(f);
+            f.BringToFront();
+			f.LoadRecords();
+            f.Show();
+        }
+
+        private void btnValidity_Click(object sender, EventArgs e)
+        {
+            frmValidityList f = new frmValidityList();
+            f.TopLevel = false;
+            panel4.Controls.Add(f);
+            f.BringToFront();
+           // f.LoadRecords();
+            f.Show();
+        }
+    }
 }
