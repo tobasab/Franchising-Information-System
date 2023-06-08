@@ -59,7 +59,7 @@ namespace Franchising_Information_System
             f.TopLevel = false;
             panel4.Controls.Add(f);
             f.BringToFront();
-           // f.LoadRecords();
+           f.LoadRecords();
             f.Show();
         }
     }
