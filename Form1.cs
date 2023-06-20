@@ -62,5 +62,14 @@ namespace Franchising_Information_System
            f.LoadRecords();
             f.Show();
         }
-    }
+
+		private void btnServer_Click(object sender, EventArgs e)
+		{
+			fmServerConfig f = new fmServerConfig();
+			f.TopLevel = false;
+			panel4.Controls.Add(f);
+			f.BringToFront();
+			f.Show();
+		}
+	}
 }
